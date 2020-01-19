@@ -1,0 +1,30 @@
+@import "variable";
+
+/*-----| Global Classes |-----*/
+li{list-style: none;}
+a, a:hover{text-decoration: none;}
+a:focus, button:focus{outline: 0;}
+.fade-enter{opacity: 0.01;}
+.fade-enter-active{opacity: 1; transition: opacity 1000ms ease-in;}
+.fade-exit{opacity: 1;}
+
+/*-----| Buttons |-----*/
+.btn:focus{outline: 0; box-shadow: none;}
+.btn + .btn {margin-left: 10px;}
+
+
+/*-----| Fade |-----*/
+.fade-enter{opacity: 0.01;}
+.fade-enter-active{opacity: 1; transition: opacity 1000ms ease-in;}
+.fade-exit{opacity: 1;}
+.fade-exit-active{opacity: 0.01;}
+
+
+
+/*-----| Columns |-----*/
+.row{display: flex; flex-wrap: wrap; margin:0 -10px; flex-direction: row;}
+.col-4{width:calc(33.33% - 20px); padding: 0 10px;}
+
+
+/*-----| Heading |-----*/
+h1{font-size: 2.5rem; color:$headColor; margin:0;}

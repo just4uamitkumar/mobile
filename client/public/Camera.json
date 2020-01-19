@@ -1,0 +1,33 @@
+[
+    { "id":1, "imgUrl":"../images/camera/1.jpg", "name":"Canon EOS 5D Mark IV DSLR Body",
+    "price":"2,499", "regularPrice":"3,099", "reviewCount":537, "isAvailable":"In Stock",
+    "writer":"Nathan Lee Allen", "discount":19,
+    "descrip":"Simply put, this camera is a powerhouse. It has everything a professional outdoor photographer needs when it comes to speed, performance, and durability. I’ve shot with other professional-grade cameras, and nothing beats this camera’s color science. It’s a dream to shoot with, and post work is much more accurate and easy. "},
+
+    { "id":2, "imgUrl":"../images/camera/2.jpg", "name":"Nikon D850 DSLR Camera Body",
+    "price":"2,796", "regularPrice":"3,296", "reviewCount":521, "isAvailable":"In Stock",
+    "writer":"Seth Miranda", "discount":15,
+    "descrip":"The Nikon D850 and I go way back. It's been my go-to camera for portrait photography, and the camera I recommend to any Nikon shooters ready to step up their game. If you want the highest-res images with sharp, precise details, put the D850 on your list."},
+
+    { "id":3, "imgUrl":"../images/camera/3.jpg", "name":"Nikon D750 DSLR Body",
+    "price":"1,196", "regularPrice":"1,69", "reviewCount":533, "isAvailable":"In Stock",
+    "writer":"Alex Stead", "discount":29,
+    "descrip":"The last two seasons of On The Road have been vlogged on this camera and it has been indispensable and a true workhorse in the series. Its smaller file sizes make processing the day's work much quicker without sacrificing video quality."},
+
+    { "id":4, "imgUrl":"../images/camera/4.jpg", "name":"Canon EOS R Mirrorless Digital",
+    "price":"1,799", "regularPrice":"2,299", "reviewCount":190, "isAvailable":"Out of Stock",
+    "writer":"Nathan Lee Allen", "discount":22,
+    "descrip":"CarePAK PLUS from Canon offers protection from accidental damage such as drops, spills, power surges, and more including normal wear and tear, beyond the standard warranty period. With a CarePAK PLUS, a damaged product will be repaired to good working condition or replaced with an equivalent product."},
+
+    { "id":5, "imgUrl":"../images/camera/5.jpg", "name":"Fujifilm GFX 50S 51.4MP ",
+    "price":"4,999", "regularPrice":"5,499", "reviewCount":15, "isAvailable":"In Stock",
+    "writer":"Daniel Norton", "discount":19,
+    "descrip":"I still can’t believe how small and easy to use Hasselblad made this medium format camera! It's incredible and easy to use."},
+
+    { "id":6, "imgUrl":"../images/camera/6.jpg", "name":"Fujifilm GFX 50R Medium Format",
+    "price":"3,999", "regularPrice":"4,499", "reviewCount":13, "isAvailable":"In Stock",
+    "writer":"Fernando Martine", "discount":0,
+    "descrip":"The Fujifilm GFX 50R is a lightweight, impressively portable medium format camera that features the same 51.4MP medium format sensor as the 50S, has an advanced image processor, and Fujifilm's classic Film Simulations. It packs a lot of quality in a rugged but small body."}
+]
+    
+    

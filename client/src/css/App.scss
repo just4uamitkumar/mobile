@@ -1,0 +1,109 @@
+@import "base";
+@import "mixin";
+
+
+
+/*-----| HTML, Body |-----*/
+html{font-size: 14px; color:$textColor; line-height: 1.5;}
+.container{max-width: 1070px;}
+
+
+/*-----| Header |-----*/
+header{background:$bgColor3; display: flex;  justify-content: space-between;
+    align-items: center;  padding: 10px 20px;
+
+    .logo{      
+        a{
+            display: block; padding: 10px 15px; font-size: 1.5rem;
+            color:$logoColor;
+        }
+    }
+
+    .tagline{
+        color:$whiteText;
+        font-size: 2rem;;
+    }
+
+    nav{        
+        ul{display: flex; margin:0;
+            li{margin:0 15px;
+              a{
+                  display: block;
+                  padding:5px 10px;
+                  color:$navColor;
+                  span{display: inline-block; vertical-align: middle;}
+                  &:hover{
+                    color:$whiteText;
+                } 
+              }               
+            }
+        }
+    }
+}
+
+/*-----| Main |-----*/
+.pageHeader{background:$bgColor2; padding: 15px 0;
+    .container{
+        display: flex; justify-content: space-between;
+    }
+}
+.content{padding: 15px 0;}
+.contentWrap{padding: 10px; background-color: $bgColor2;}
+
+/*-----| Mobile |-----*/
+.itemWrap{ 
+    .mobileList{display: flex; margin:0 -15px;   flex-wrap: wrap;
+        .itemBlock{padding: 0; width:calc(25% - 30px);
+            margin:15px;
+            .productName{background:$bgColor3; padding: 10px;
+                position: relative;
+                .name{color:$whiteText; font-size: 1.2rem;}
+                button{position: absolute; top:-5px; right:-5px;} 
+            }
+
+            .productBody{padding:10px; border-left:1px solid $bgColor3;
+                border-right:1px solid $bgColor3;
+                p{margin:0;}
+                
+                .imgWrap{text-align: center; height: 180px; margin:10px 0;
+                    img{max-width: 100%; max-height: 100%;}
+                }
+
+            }            
+            
+            .bottom{background: $headColor; padding: 10px; color:$whiteText;
+                display: flex; justify-content: space-between; align-items: center;
+                .price{font-size: 1.2rem;}                
+            }
+        }
+    }
+    
+}
+
+
+
+/*-----| Camera |------*/
+.camList{margin-bottom: 30px;
+    .productName{background:$headColor; color: $bgColor2; padding: 8px 10px;
+        @include borderRadius(6px 6px 0 0);}
+    .product_img{ border:1px solid $headColor; padding: 15px 0; 
+        img{width:80%; margin:0 auto;}
+    }
+    .product_info{background:$headColor; color: $bgColor2; padding: 8px 10px;
+        display: flex; justify-content: space-between; 
+        @include borderRadius(0 0 6px 6px);
+        span{font-weight: 700;}
+    }    
+}
+
+
+/*-----| Camera |------*/
+.camDetail{margin: 30px 0;
+    .product_img{padding: 15px 0; 
+        img{width:100%; margin:0 auto;}
+    }
+    .story{
+        margin: 10px 0;
+    }
+      
+}

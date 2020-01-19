@@ -1,0 +1,51 @@
+@media screen and (max-width: 1024px) {
+
+    /*-----| HTML, Body |-----*/
+    html{font-size: 13px;}
+    .container{max-width: 100%;}
+    
+    
+    /*-----| Header |-----*/
+    header{ display: flex;  justify-content: space-between;
+        align-items: center;  padding: 10px 5px;
+        .logo{      
+            a{padding: 10px 5px; font-size: 1rem;}
+        }
+    
+        .tagline{font-size: 1.5rem;}
+    
+        nav{        
+            ul{
+                li{margin:0 15px;
+                  a{
+                      padding:5px 10px;
+                  }               
+                }
+            }
+        }
+    }
+    
+    /*-----| Main |-----*/
+    .pageHeader{ padding: 7px 0;}
+    .content{padding: 10px 0;}
+    .contentWrap{padding: 8px;}
+    
+    /*-----| Mobile |-----*/
+    .itemWrap{ 
+        .mobileList{
+            .itemBlock{width:calc(50% - 30px); margin:15px; 
+                .productName{padding: 7px;
+                    .name{font-size: 1.2rem;}               
+                }
+    
+                .productBody{padding:7px;                
+                    .imgWrap{ height: 170px; margin:7px 0;}
+                }   
+                
+                .bottom{padding: 7px;}
+            }
+        }    
+    }
+    
+    
+    }
