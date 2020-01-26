@@ -9,33 +9,51 @@ html{font-size: 14px; color:$textColor; line-height: 1.5;}
 
 
 /*-----| Header |-----*/
-header{background:$bgColor3; display: flex;  justify-content: space-between;
-    align-items: center;  padding: 10px 20px;
-
-    .logo{      
-        a{
-            display: block; padding: 10px 15px; font-size: 1.5rem;
-            color:$logoColor;
+header{
+    .mainHeader{ display: flex;  justify-content: space-between;
+        align-items: center;  padding: 10px 20px; background:$bgColor3; 
+        .logo{      
+            a{
+                display: block; padding: 10px 15px; font-size: 1.5rem;
+                color:$logoColor;
+            }
         }
-    }
+    
+        .tagline{
+            color:$whiteText;
+            font-size: 2rem;;
+        }
+    
+        nav{        
+            ul{display: flex; margin:0;
+                li{margin:0 15px;
+                  a{
+                      display: block;
+                      padding:5px 10px;
+                      color:$navColor;
+                      span{display: inline-block; vertical-align: middle;}
+                      &:hover, &.active{
+                        color:$whiteText;
+                        } 
+                  }               
+                }
+            }
+        }
+    }    
 
-    .tagline{
-        color:$whiteText;
-        font-size: 2rem;;
-    }
+    .headerTop{display: flex;  justify-content: space-between; color:$bgColor2;
+        align-items: center;  padding: 10px 15px 0; background:$textColor;
 
-    nav{        
-        ul{display: flex; margin:0;
-            li{margin:0 15px;
-              a{
-                  display: block;
-                  padding:5px 10px;
-                  color:$navColor;
-                  span{display: inline-block; vertical-align: middle;}
-                  &:hover{
-                    color:$whiteText;
-                } 
-              }               
+        .topSelect{
+            width:200px;
+
+        }
+
+        .topRadio{ width:30%;
+            text-align: right;
+            
+            .form-check { display: inline; 
+                label{margin:0 20px;}
             }
         }
     }
@@ -106,4 +124,10 @@ header{background:$bgColor3; display: flex;  justify-content: space-between;
         margin: 10px 0;
     }
       
+}
+
+
+@media (max-width: $breakpoint-tablet) {
+    header{flex-direction: column;}
+  
 }

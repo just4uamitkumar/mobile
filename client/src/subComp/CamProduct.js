@@ -3,7 +3,7 @@ import { Button, Col } from 'reactstrap';
 
 function CamProduct(props){
     return(        
-        <Col xs="3" data-id={props.id} className="camList">
+        <Col sm="3" data-id={props.id} className="camList">
             <div className="productName">{props.name}</div>
             <div className="product_img text-center">
                 <img src={props.imgUrl} alt="" />

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link} from "react-router-dom";
+import { Link, NavLink, withRouter} from "react-router-dom";
 import { FaHome, FaMobileAlt, FaLaptop, FaCamera, FaPhone } from 'react-icons/fa';
 
 class Navigation extends Component {
@@ -23,7 +23,14 @@ class Navigation extends Component {
           <ul>
             {
               this.state.navLinks.map((e, index) =>
-                <li key={index}><Link to={e.path}>{e.icon} <span>{e.name}</span> </Link></li>
+                index === 0 ?
+                <li key={index}>
+                  <NavLink exact to={e.path}>{e.icon} <span>{e.name}</span> </NavLink>
+                </li>
+                :
+                <li key={index}>
+                  <NavLink to={e.path}>{e.icon} <span>{e.name}</span> </NavLink>
+                </li>
             )}              
           </ul>
       </nav>        
@@ -32,4 +39,4 @@ class Navigation extends Component {
   
 }
 
-export default Navigation;
+export default withRouter(Navigation);
