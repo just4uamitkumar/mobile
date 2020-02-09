@@ -4,4 +4,12 @@
   border-radius: $property;
 }
 
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
 

@@ -1,0 +1,66 @@
+{
+"HP":[
+{ "id":1, "imgUrl":"../images/laptop/1.jpeg", "name":"HP 15 Pentium Gold",
+    "screenSize":15.6, "price":22100, "hardDisk":2,  "ram":4 },
+{ "id":2, "imgUrl":"../images/laptop/2.jpeg", "name":"HP 15 Core i3",
+    "screenSize":18.5, "price":31100, "hardDisk":1.5,  "ram":8 },
+{ "id":3, "imgUrl":"../images/laptop/3.jpeg", "name":"HP 15q APU Dual Core",
+    "screenSize":15.6, "price":22490, "hardDisk":1,  "ram":6},
+{ "id":4, "imgUrl":"../images/laptop/4.jpeg", "name":"HP Pavilion 15-EC Ryzen",
+    "screenSize":13.6, "price":49500, "hardDisk":3,  "ram":8},
+{ "id":5, "imgUrl":"../images/laptop/5.jpeg", "name":"HP 14q Core i5 8th Gen",
+    "screenSize":17.6, "price":42388, "hardDisk":1,  "ram":8 }     
+],
+
+"Dell":[
+{ "id":6, "imgUrl":"../images/laptop/6.jpeg", "name":"Dell 14 3000 Core i3",
+    "screenSize":14, "price":25490, "hardDisk":1, "ram":4},
+{ "id":7, "imgUrl":"../images/laptop/7.jpeg", "name":"Dell G3 Series Core i5",
+    "screenSize":15.6, "price":67125, "hardDisk":1,  "ram":8},
+{ "id":8, "imgUrl":"../images/laptop/8.jpeg", "name":"Dell Vostro 3000 Core",
+    "screenSize":13, "price":42490, "hardDisk":1,  "ram":8 },
+{ "id":9, "imgUrl":"../images/laptop/9.jpeg", "name":"Dell Inspiron 13 7000 ",
+    "screenSize":13.3, "price":63490, "hardDisk":0.5,  "ram":8},
+{ "id":10, "imgUrl":"../images/laptop/10.jpeg", "name":"Dell 14 3000 Core i3",
+    "screenSize":14, "price":24990, "hardDisk":1,  "ram":4}
+],
+
+"Asus":[
+{ "id":11, "imgUrl":"../images/laptop/11.jpeg", "name":"HP 15 Pentium Gold",
+    "screenSize":15.6, "price":22100, "hardDisk":2,  "ram":4 },
+{ "id":12, "imgUrl":"../images/laptop/12.jpeg", "name":"HP 15 Core i3",
+    "screenSize":18.5, "price":31100, "hardDisk":1.5,  "ram":8},
+{ "id":13, "imgUrl":"../images/laptop/13.jpeg", "name":"HP 15q APU Dual Core",
+    "screenSize":15.6, "price":22490, "hardDisk":1,  "ram":6 },
+{ "id":14, "imgUrl":"../images/laptop/14.jpeg", "name":"HP Pavilion 15-EC Ryzen",
+    "screenSize":13.6, "price":49500, "hardDisk":3,  "ram":8 },
+{ "id":15, "imgUrl":"../images/laptop/15.jpeg", "name":"HP 14q Core i5 8th Gen",
+    "screenSize":17.6, "price":42388, "hardDisk":1,  "ram":8 }
+],
+
+"Lenovo":[
+{ "id":16, "imgUrl":"../images/laptop/16.jpeg", "name":"HP 15 Pentium Gold",
+    "screenSize":15.6, "price":22100, "hardDisk":2,  "ram":4 },
+{ "id":17, "imgUrl":"../images/laptop/17.jpeg", "name":"HP 15 Core i3",
+    "screenSize":18.5, "price":31100, "hardDisk":1.5,  "ram":8 },
+{ "id":18, "imgUrl":"../images/laptop/18.jpeg", "name":"HP 15q APU Dual Core",
+    "screenSize":15.6, "price":22490, "hardDisk":1,  "ram":6},
+{ "id":19, "imgUrl":"../images/laptop/19.jpeg", "name":"HP Pavilion 15-EC Ryzen",
+    "screenSize":13.6, "price":49500, "hardDisk":3,  "ram":8 },
+{ "id":20, "imgUrl":"../images/laptop/20.jpeg", "name":"HP 14q Core i5 8th Gen",
+    "screenSize":17.6, "price":42388, "hardDisk":1,  "ram":8  }
+],
+
+"Apple":[
+{ "id":21, "imgUrl":"../images/laptop/21.jpeg", "name":"Apple MacBook Air Core i5",
+    "screenSize":13.3, "price":61990, "hardDisk":128, "ram":8, "isChecked":false },
+{ "id":22, "imgUrl":"../images/laptop/22.jpeg", "name":"Apple MacBook Pro Core3",
+    "screenSize":14.5, "price":114000, "hardDisk":256, "ram":8, "isChecked":false  },
+{ "id":23, "imgUrl":"../images/laptop/23.jpeg", "name":"Apple MacBook Core m3",
+    "screenSize":12, "price":89990, "hardDisk":256, "ram":8, "isChecked":false },
+{ "id":24, "imgUrl":"../images/laptop/24.jpeg", "name":"Apple MacBook Air Core i5",
+    "screenSize":13.3, "price":115000, "hardDisk":256, "ram":8, "isChecked":false },
+{ "id":25, "imgUrl":"../images/laptop/25.jpeg", "name":"Apple MacBook Air Core i7",
+    "screenSize":137500, "price":137500, "hardDisk":256, "ram":8, "isChecked":false }
+]
+}

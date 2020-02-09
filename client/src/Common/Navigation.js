@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { Link, NavLink, withRouter} from "react-router-dom";
-import { FaHome, FaMobileAlt, FaLaptop, FaCamera, FaPhone } from 'react-icons/fa';
+import {  NavLink,  withRouter} from "react-router-dom";
+import ModalB from '../subComp/ModalB';
+import { FaHome, FaMobileAlt, FaLaptop, FaCamera, FaPhone, FaPowerOff } from 'react-icons/fa';
 
 class Navigation extends Component {
     constructor(){
@@ -12,9 +13,19 @@ class Navigation extends Component {
             {'name':'Mobile', 'path':'/Mobile', 'icon': <FaMobileAlt/> },
             {'name':'Laptop', 'path':'/Laptop', 'icon': <FaLaptop/> },
             {'name':'Camera',  'path':'/Camera', 'icon': <FaCamera/>}, 
-            {'name':'Contact Us', 'path':'/Contact', 'icon': <FaPhone/>}
-          ]
+            {'name':'Contact Us', 'path':'/Contact', 'icon': <FaPhone/>}            
+          ],
+          isOpen:false
         }
+    }
+
+    toggleModal = () => {
+      this.setState({ isOpen: !this.state.isOpen });
+    };
+
+    Logout = () => {
+      this.toggleModal();
+      this.props.history.push('/Login');
     }
 
   render(){
@@ -33,6 +44,14 @@ class Navigation extends Component {
                 </li>
             )}              
           </ul>
+
+          <div>
+            <span onClick={this.toggleModal}><FaPowerOff/></span>
+          </div>
+
+          <ModalB isOpen={this.state.isOpen}
+            toggleModal={this.toggleModal} name={'Logout'}
+             content={'Are you sure want to logout?'}  Logout={this.Logout} /> 
       </nav>        
       );
   }

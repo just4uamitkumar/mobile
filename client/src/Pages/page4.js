@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Container, Button, Row, Col, Form, FormGroup, Label, Input} from 'reactstrap';
+import {Container} from 'reactstrap';
 
 class Page4 extends Component {
     constructor(props){
