@@ -24,9 +24,9 @@ header{
             font-size: 2rem;;
         }
     
-        nav{        
+        nav{  display: flex;  align-items: center;
             ul{display: flex; margin:0;
-                li{margin:0 15px;
+                li{margin:0 10px;
                   a{
                       display: block;
                       padding:5px 10px;
@@ -38,6 +38,11 @@ header{
                   }               
                 }
             }
+            div{
+                span{color:$logoColor; cursor: pointer;
+                    &:hover{color:$whiteText;}
+                }
+            }
         }
     }    
 
@@ -46,7 +51,6 @@ header{
 
         .topSelect{
             width:200px;
-
         }
 
         .topRadio{ width:30%;
@@ -66,7 +70,8 @@ header{
     }
 }
 .content{padding: 15px 0;}
-.contentWrap{padding: 10px; background-color: $bgColor2;}
+.contentWrap{padding: 10px; background-color: $bgColor2; margin: 15px 0;
+    @include clearfix;}
 
 /*-----| Mobile |-----*/
 .itemWrap{ 
@@ -86,7 +91,6 @@ header{
                 .imgWrap{text-align: center; height: 180px; margin:10px 0;
                     img{max-width: 100%; max-height: 100%;}
                 }
-
             }            
             
             .bottom{background: $headColor; padding: 10px; color:$whiteText;
@@ -97,8 +101,6 @@ header{
     }
     
 }
-
-
 
 /*-----| Camera |------*/
 .camList{margin-bottom: 30px;
@@ -122,8 +124,95 @@ header{
     }
     .story{
         margin: 10px 0;
+    }      
+}
+
+/*-----| Laptop |------*/
+.modalA{
+    .product_img{width:80%; margin:0 auto 10px;
+        img{width:100%;}
     }
-      
+}
+
+tr.disable td{background:$textColor;}
+.storage{display: flex; justify-content: space-between;
+background: $textColor; padding: 8px; color:$whiteText;}
+.modal-footer {display: flex; justify-content: space-between;}
+
+/*-----| Laptop |------*/
+.contactForm{padding:10px 10px 0; background:$bgColor2; @include borderRadius(6px);
+    margin: 0 0 20px; @include clearfix;
+    .form-group{margin-top:1rem;}
+}
+
+/*-----| Keyboard  |------*/
+.KeybaordWrapper{background: $bgColor2; padding: 20px; box-shadow: 0 0 10px #292929 inset;
+    .keyRow {display: flex; flex-wrap: nowrap; padding: 0; margin: 0 auto ;
+         li{ padding: 0 0.3% 0.8%; width: 10.7%;
+            button{width: 100%;	font-size: 1.7em; font-weight: 700;
+                background: $whiteText;  border: 0;  color:$textColor;
+                box-shadow: 0 0 6px 1px #fffdfd inset, 1px 3px 3px #8c8c8c;
+
+                &.active{ background: #d2d2d2;  border: 0;  color:$textColor;}
+                &:hover, &:focus{text-decoration: none;}
+            }          
+            
+        }
+        &.second{width:96%;}
+        &.third{width:92%;
+            li{width:11.1%; }
+        }
+        &.fourth{width:98%;
+            li{width:11.1%;
+                &:first-child img {
+                    width: 25px;
+                    margin-top: -7px;
+                }
+                
+                &:last-child {
+                    button{background:$logoColor;}
+                }
+            }
+        }
+        &.fifth{width:90%;
+            li{width: 80%;
+                &:first-child, &:last-child{width:11%;}
+            }
+        }
+    }
+}
+
+/*-----| Modal  |------*/
+.modal{
+    .modal-header{background-color: $bgColor;
+        h5{color:$whiteText}
+    }
+}
+
+
+/*-----| NumKey |------*/
+.numKey{background:$bgColor2; padding: 10px;
+    .keyWrap{
+        ul{display: flex; flex-wrap: wrap; margin: 0 auto; padding: 0;
+            li{ width:29.333%; margin:0 2% 2%;
+                button{width: 100%;}
+                &:last-child{width:62%;}
+            }
+        }
+    }
+}
+   
+
+/*-----| Login  |------*/
+.LoginPage{display: flex; justify-content: center; align-items: center;
+    .loginWrap{background: $textColor; padding: 15px 20px; @include borderRadius(6px); 
+        width: 98%; max-width: 450px;
+        label{color:$whiteText}
+        span{color:$whiteText; cursor: pointer;}
+        h2{font-size: 2rem; color: $whiteText;}
+
+    }
+
 }
 
 

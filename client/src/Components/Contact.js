@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import {Container, Button, Row, Col, Form, FormGroup, Label, Input} from 'reactstrap';
+import KeyBoard from '../subComp/KeyBoard';
+import {Container, Button, Row, Col, Form, FormGroup, Label, Input,
+Table} from 'reactstrap';
 
 class Contact extends Component {
     constructor(props){
@@ -88,7 +90,6 @@ class Contact extends Component {
         e.preventDefault();
 
        if(this.handleValidation()){
-            this.toggle();
             const name = document.MyForm.name.value;
             const phone = document.MyForm.phone.value;
             const email = document.MyForm.email.value;
@@ -106,7 +107,6 @@ class Contact extends Component {
                 fields: {}
             });
        }
-        //this.props.history.push('/');
 
         else{
             alert("Please fill the required fields.");          
@@ -136,62 +136,85 @@ class Contact extends Component {
             </div>
             <div className="content">
                 <Container>
-                    <Row>
-                        <Col sm="4">
-                            <Form className="contactForm clearfix"  onSubmit={this.formSubmit}
-                             name="MyForm">
-                                <h5>Please fill your details to contact us</h5>
-                                <FormGroup>
-                                    <Label for="name">Name</Label>
-                                    <Input type="text" name="name" id="name" 
-                                     onChange={this.handleChange.bind(this, "name")}
-                                     value={this.state.fields["name"] || ''}
-                                    placeholder="Name" />
-                                    <span className="text-danger">{this.state.errors["name"]}</span>
-                                </FormGroup>
+                    <Form className="contactForm"  onSubmit={this.formSubmit}
+                        name="MyForm">
+                            <h5>Please fill your details to contact us</h5>
+                        <Row>
+                            <Col sm="3">
+                                <Label for="name">Name</Label>
+                                <Input type="text" name="name" id="name" 
+                                    onChange={this.handleChange.bind(this, "name")}
+                                    value={this.state.fields["name"] || ''}
+                                placeholder="Name" />
+                                <span className="text-danger">{this.state.errors["name"]}</span>
+                            </Col>
 
-                                <FormGroup>
-                                    <Label for="phone">Phone</Label>
-                                    <Input type="number" name="phone" id="phone" 
-                                     onChange={this.handleChange.bind(this, "phone")}
-                                     value={this.state.fields["phone"] || ''}
-                                    placeholder="Contact No." />
-                                    <span className="text-danger">{this.state.errors["phone"]}</span>
-                                </FormGroup>
+                            <Col sm="3">
+                                <Label for="phone">Phone</Label>
+                                <Input type="number" name="phone" id="phone" 
+                                    onChange={this.handleChange.bind(this, "phone")}
+                                    value={this.state.fields["phone"] || ''}
+                                placeholder="Contact No." />
+                                <span className="text-danger">{this.state.errors["phone"]}</span>
+                            </Col>
 
-                                <FormGroup>
-                                    <Label for="email">Email</Label>
-                                    <Input type="email" name="email" id="email" 
-                                    onChange={this.handleChange.bind(this, "email")}
-                                    value={this.state.fields["email"] || ''}
-                                    placeholder="Email" />
-                                    <span className="text-danger">{this.state.errors["email"]}</span>
-                                </FormGroup>
+                            <Col sm="3">
+                                <Label for="email">Email</Label>
+                                <Input type="email" name="email" id="email" 
+                                onChange={this.handleChange.bind(this, "email")}
+                                value={this.state.fields["email"] || ''}
+                                placeholder="Email" />
+                                <span className="text-danger">{this.state.errors["email"]}</span>
+                            </Col>
 
-                                <FormGroup>
-                                    <Label for="city">City</Label>
-                                    <Input type="select" name="city" id="city"
-                                    onChange={this.handleChange.bind(this, "city")}
-                                    value={this.state.fields["city"] || ''}>
-                                        <option value="-1">Select City</option>
-                                        <option value="Delhi">Delhi</option>
-                                        <option value="Agra">Agra</option>
-                                        <option value="Mathura">Mathura</option>
-                                        <option value="Noida">Noida</option>
-                                        <option value="Ghaziabad">Ghaziabad</option>
-                                    </Input>
-                                    <span className="text-danger">{this.state.errors["city"]}</span>
-                                </FormGroup>
+                            <Col sm="3">
+                                <Label for="city">City</Label>
+                                <Input type="select" name="city" id="city"
+                                onChange={this.handleChange.bind(this, "city")}
+                                value={this.state.fields["city"] || ''}>
+                                    <option value="-1">Select City</option>
+                                    <option value="Delhi">Delhi</option>
+                                    <option value="Agra">Agra</option>
+                                    <option value="Mathura">Mathura</option>
+                                    <option value="Noida">Noida</option>
+                                    <option value="Ghaziabad">Ghaziabad</option>
+                                </Input>
+                                <span className="text-danger">{this.state.errors["city"]}</span>
+                            </Col>
+                        </Row>
 
-                                <FormGroup className="text-right">
-                                    <Button color="warning" type="reset">Reset</Button>
-                                    <Button color="success" type="submit">Submit</Button>                                   
-                                </FormGroup>
-                            </Form>
-                        </Col>
-                    </Row>
+                        <FormGroup className="text-right">
+                            <Button color="warning" type="reset">Reset</Button>
+                            <Button color="success" type="submit">Submit</Button>                                   
+                        </FormGroup>
+                    </Form>
+                    
+
+                    <div className="contentWrap">
+                        <div className="tableResponsive">
+                            <Table striped hover>
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Phone</th>
+                                        <th>Email</th>
+                                        <th>City</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr> 
+                                        <td>{this.state.name}</td>
+                                        <td>{this.state.phone}</td>
+                                        <td>{this.state.email}</td>
+                                        <td>{this.state.city}</td>
+                                    </tr>                                    
+                                </tbody>
+                            </Table>
+                        </div>
+                    </div>                   
                 </Container>                
             </div>
+            <KeyBoard/>
         </div>           
       );
   }

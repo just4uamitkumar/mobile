@@ -15,6 +15,7 @@ import Mobile from './Components/Mobile';
 import Camera from './Components/Camera';
 import Laptop from './Components/Laptop';
 import Contact from './Components/Contact';
+import Login from './Components/Login';
 
 import Page1 from './Pages/Page1';
 import Page2 from './Pages/Page1';
@@ -27,8 +28,8 @@ class App extends Component {
     super(props);
     
     this.state = {
-      headTitleA : 'This is a common header text',
-      headTitleB : 'This is Contact page text',
+      headTitleA : 'Common header text',
+      headTitleB : 'Contact page text',
       isTagChangedA :false
     }
 
@@ -59,11 +60,16 @@ class App extends Component {
                 <Route path="/Mobile"><Mobile/></Route>
                 <Route path="/Laptop"><Laptop/></Route>
                 <Route path="/Camera"><Camera/></Route>
-                <Route path="/Contact"><Contact contactText={this.contactText}/></Route>
-                <Route path="./Pages/page1"><Page1/></Route>
-                <Route path="./Pages/page2"><Page2/></Route>
-                <Route path="./Pages/page3"><Page3/></Route>
-                <Route path="./Pages/page4"><Page4/></Route>
+                <Route path="/Contact">
+                  <Contact contactText={this.contactText}/>
+                </Route>
+                <Route path="/Page1"><Page1/></Route>
+                <Route path="/Page2"><Page2/></Route>
+                <Route path="/Page3"><Page3/></Route>
+                <Route path="/Page4"><Page4/></Route>
+                <Route path="/Login"><Login/></Route>
+
+                
               </Switch>
             </div>
           </Router>
