@@ -37,19 +37,20 @@ class Login extends Component {
     onRegister = (e) => {
         e.preventDefault();
 
-        this.state.phone.length === 0 ? 
+        this.state.phone.length !== 10 ? 
 
-        alert('Please enter your pin to login')
+        alert('Please enter 10 digit mobile number to login')
 
         :  
         
         this.state.numbers.includes(this.state.phone) ?
 
-        this.props.history.push('/')
+        alert('You are already registered. Please login using your credentials')
 
         :
 
-        alert('You Entered wrong PIN');
+        this.props.history.push('/')
+        
     }
 
     onSubmit = (e) => {
