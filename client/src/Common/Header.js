@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Navigation from './Navigation';
 import { Input,  FormGroup, Label } from 'reactstrap';
-import {withRouter} from 'react-router-dom';
+import {withRouter, Link} from 'react-router-dom';
 
 class Header extends Component {
     constructor(){
@@ -69,7 +69,7 @@ class Header extends Component {
 
           <div className="mainHeader">
             <div className="logo">
-                <a href="/">{this.state.logo}</a>
+                <Link to="/Home">{this.state.logo}</Link>
             </div>
 
             <div className="tagline">

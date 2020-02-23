@@ -1,16 +1,27 @@
 import React, { Component } from 'react';
 import {Container} from 'reactstrap';
+import { Redirect } from 'react-router-dom';
 
 class Home extends Component {
-    constructor(){
-        super()
+    constructor(props){
+        super(props)
+        const token = localStorage.getItem('token')
+        let loggedIn = true;
+
+        if(token == null){
+            loggedIn = false
+        }
 
         this.state = {
-            pageTitle:"Home"
+            pageTitle:"Home",
+            loggedIn
         }
     }
 
   render(){
+      if(this.state.loggedIn === false){
+          return <Redirect to="/"/>
+      }
     return (
         <div className="pageCont">
             <div className="pageHeader">

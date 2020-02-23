@@ -2,11 +2,18 @@ import React, { Component } from 'react';
 import {Container,  Form, FormGroup, Input, Button, 
     Label, Modal, ModalBody, ModalHeader} from 'reactstrap';
 import NumKey from '../subComp/NumKey';
-import {withRouter} from 'react-router-dom'
+import {withRouter, Redirect} from 'react-router-dom'
 
 class Login extends Component {
     constructor(props){
         super(props);
+        const token = localStorage.getItem('token')
+        let loggedIn = false;
+
+        if(token == null ){
+            loggedIn = false
+        }
+        
         this.state = {
             pageTitle: 'Login',
             register:'Create Account',
@@ -49,22 +56,27 @@ class Login extends Component {
 
         :
 
-        this.props.history.push('/')
+        this.props.history.push('/Home')
         
     }
 
     onSubmit = (e) => {
         e.preventDefault();
 
-        if(this.state.username === '') {
+        const {username, password} = this.state
+
+        if(username === '') {
             alert('User Name is Empty');
         }
-        else if(this.state.password === ''  ){
+        else if(password === ''  ){
             alert('Password is Empty')
         }
-        else if(this.state.username === 'admin' && 
-                this.state.password === 'admin'){
-            this.props.history.push('/')
+        else if(username === 'admin' && password === 'admin'){
+            //this.props.history.push('/');
+            localStorage.setItem("token", "ssssssss")
+            this.setState({
+                loggedIn:true
+            })
         }
         else{
             alert('User credentials are wrong')
@@ -88,6 +100,11 @@ class Login extends Component {
 
 
   render(){
+
+      if(this.state.loggedIn){
+          return <Redirect to='/Home'/>
+      }
+
     return (
 
         <Container className="LoginPage">

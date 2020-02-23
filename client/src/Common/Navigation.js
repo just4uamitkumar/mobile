@@ -9,7 +9,7 @@ class Navigation extends Component {
 
         this.state = {
           navLinks:[
-            {'name':'Home', 'path':'/', 'icon': <FaHome/>}, 
+            {'name':'Home', 'path':'/Home', 'icon': <FaHome/>}, 
             {'name':'Mobile', 'path':'/Mobile', 'icon': <FaMobileAlt/> },
             {'name':'Laptop', 'path':'/Laptop', 'icon': <FaLaptop/> },
             {'name':'Camera',  'path':'/Camera', 'icon': <FaCamera/>}, 
@@ -25,7 +25,7 @@ class Navigation extends Component {
 
     Logout = () => {
       this.toggleModal();
-      this.props.history.push('/Login');
+      this.props.history.push('/Logout');
     }
 
   render(){
@@ -33,12 +33,7 @@ class Navigation extends Component {
       <nav>
           <ul>
             {
-              this.state.navLinks.map((e, index) =>
-                index === 0 ?
-                <li key={index}>
-                  <NavLink exact to={e.path}>{e.icon} <span>{e.name}</span> </NavLink>
-                </li>
-                :
+              this.state.navLinks.map((e, index) =>               
                 <li key={index}>
                   <NavLink to={e.path}>{e.icon} <span>{e.name}</span> </NavLink>
                 </li>
