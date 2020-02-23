@@ -1,8 +1,6 @@
 @import "base";
 @import "mixin";
 
-
-
 /*-----| HTML, Body |-----*/
 html{font-size: 14px; color:$textColor; line-height: 1.5;}
 .container{max-width: 1070px;}
@@ -64,6 +62,7 @@ header{
 }
 
 /*-----| Main |-----*/
+.main{height: calc(100vh - 105px);}
 .pageHeader{background:$bgColor2; padding: 15px 0;
     .container{
         display: flex; justify-content: space-between;
@@ -204,12 +203,16 @@ background: $textColor; padding: 8px; color:$whiteText;}
    
 
 /*-----| Login  |------*/
-.LoginPage{display: flex; justify-content: center; align-items: center;
+.LoginPage{display: flex; justify-content: center; align-items: center; height: calc(100% - 150px);
     .loginWrap{background: $textColor; padding: 15px 20px; @include borderRadius(6px); 
         width: 98%; max-width: 450px;
         label{color:$whiteText}
         span{color:$whiteText; cursor: pointer;}
         h2{font-size: 2rem; color: $whiteText;}
+        h3{font-size: 1.5rem; color: $bgColor2;}
+        p{font-size: 1.5rem; color: $bgColor2;
+            a{color:$bgColor2; text-decoration: underline;}        
+        }
 
     }
 

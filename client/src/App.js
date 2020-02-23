@@ -16,6 +16,7 @@ import Camera from './Components/Camera';
 import Laptop from './Components/Laptop';
 import Contact from './Components/Contact';
 import Login from './Components/Login';
+import Logout from './Components/Logout';
 
 import Page1 from './Pages/Page1';
 import Page2 from './Pages/Page2';
@@ -56,7 +57,9 @@ class App extends Component {
 
             <div className="main">
               <Switch>
-                <Route exact path="/"><Home/></Route>
+                <Route exact path="/"><Login/></Route>
+                <Route path="/Logout"><Logout/></Route>
+                <Route path="/Home"><Home/></Route>
                 <Route path="/Mobile"><Mobile/></Route>
                 <Route path="/Laptop"><Laptop/></Route>
                 <Route path="/Camera"><Camera/></Route>
@@ -67,8 +70,6 @@ class App extends Component {
                 <Route path="/Pages/Page2"><Page2/></Route>
                 <Route path="/Pages/Page3"><Page3/></Route>
                 <Route path="/Pages/Page4"><Page4/></Route>
-                <Route path="/Login"><Login/></Route>
-
                 
               </Switch>
             </div>
