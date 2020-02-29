@@ -44,7 +44,17 @@ class LapTop extends Component {
             DellModal: filteredB,
             isOpen: !this.state.isOpen
         })
-     };
+    };
+
+    removeThis = (id) => {
+        const removeHP = this.state.HPLaptop.filter(e => id !== e.id);
+        const removeDell = this.state.DellLaptop.filter(e => id !== e.id)
+       
+        this.setState({
+            HPLaptop:removeHP,
+            DellLaptop:removeDell
+        })
+    }
 
   render(){
       const {appleLapy, HPLaptop, DellLaptop, HPModal, DellModal} = this.state
@@ -117,7 +127,8 @@ class LapTop extends Component {
                                         <LapProduct key={index} name={e.name}
                                         price={e.price} ram={e.ram} hardDisk={e.hardDisk}
                                         screenSize={e.screenSize} id={e.id}
-                                        pickModal={this.pickModal }/>
+                                        pickModal={this.pickModal }
+                                        removeThis={this.removeThis}/>
                                     )}
                                 </tbody>
                             </Table>
@@ -149,7 +160,8 @@ class LapTop extends Component {
                                         <LapProduct key={index} name={e.name}
                                         price={e.price} ram={e.ram} hardDisk={e.hardDisk}
                                         screenSize={e.screenSize} id={e.id}
-                                        pickModal={this.pickModal }/>
+                                        pickModal={this.pickModal }
+                                        removeThis={this.removeThis}/>
                                     )}
                                 </tbody>
                             </Table>

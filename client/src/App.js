@@ -18,7 +18,7 @@ import Contact from './Components/Contact';
 import Login from './Components/Login';
 import Logout from './Components/Logout';
 
-import Page1 from './Pages/Page1';
+import Weather from './Pages/Weather';
 import Page2 from './Pages/Page2';
 import Page3 from './Pages/Page3';
 import Page4 from './Pages/Page4';
@@ -66,7 +66,7 @@ class App extends Component {
                 <Route path="/Contact">
                   <Contact contactText={this.contactText}/>
                 </Route>
-                <Route path="/Pages/Page1"><Page1/></Route>
+                <Route path="/Pages/Weather"><Weather/></Route>
                 <Route path="/Pages/Page2"><Page2/></Route>
                 <Route path="/Pages/Page3"><Page3/></Route>
                 <Route path="/Pages/Page4"><Page4/></Route>
