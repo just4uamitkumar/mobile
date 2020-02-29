@@ -3,6 +3,7 @@ import {Container, Table} from 'reactstrap';
 import lapyList from '../Laptop.json';
 import LapProduct from '../subComp/LapProduct';
 import ModalA from '../subComp/ModalA';
+import ModalB from '../subComp/ModalB';
 
 class LapTop extends Component {
     constructor(){
@@ -19,7 +20,9 @@ class LapTop extends Component {
             DellLaptop:lapyList.Dell,
             isOpen:false,
             HPModal:[],
-            DellModal:[],          
+            DellModal:[],
+            removeHPModal:[],
+            removeDellPModal:[]
         }
     }
 
@@ -47,17 +50,29 @@ class LapTop extends Component {
     };
 
     removeThis = (id) => {
-        const removeHP = this.state.HPLaptop.filter(e => id !== e.id);
-        const removeDell = this.state.DellLaptop.filter(e => id !== e.id)
+        const removeHP = this.state.HPLaptop.filter(e => id == e.id);
+        const removeDell = this.state.DellLaptop.filter(e => id == e.id)
        
         this.setState({
+            removeHPModal:removeHP,
+            removeDellPModal:removeDell,
+            isOpen: !this.state.isOpen
+        })
+    };
+
+    Logout ( id ) {       
+        const removeHP = this.state.HPLaptop.filter(e => id !== e.id);
+        const removeDell = this.state.DellLaptop.filter(e => id !== e.id);
+        this.setState({
             HPLaptop:removeHP,
-            DellLaptop:removeDell
+            DellLaptop:removeDell,
+            isOpen: !this.state.isOpen
         })
     }
 
   render(){
-      const {appleLapy, HPLaptop, DellLaptop, HPModal, DellModal} = this.state
+      const {appleLapy, HPLaptop, DellLaptop, 
+        HPModal, DellModal, removeHPModal, removeDellPModal} = this.state
     return (
         <div className="pageCont">
             <div className="pageHeader">
@@ -174,7 +189,7 @@ class LapTop extends Component {
                 {HPModal.map((e, index) =>
                     <ModalA isOpen={this.state.isOpen}
                     toggleModal={this.toggleModal} name={e.name}
-                    key={index} index={index} id={e.id} price={e.price}
+                    key={index} id={e.id} price={e.price}
                     imgUrl={e.imgUrl} hardDisk={e.hardDisk} ram={e.ram}/>
                 )}
                   
@@ -182,10 +197,26 @@ class LapTop extends Component {
                 {DellModal.map((e, index) =>
                     <ModalA isOpen={this.state.isOpen}
                     toggleModal={this.toggleModal} name={e.name}
-                    key={index} index={index} id={e.id} price={e.price}
+                    key={index}  id={e.id} price={e.price}
                     imgUrl={e.imgUrl} hardDisk={e.hardDisk} ram={e.ram} 
                     preItem={this.preItem} nextItem={this.nextItem} />                                                                                              
                )}
+
+                {removeHPModal.map((e, index) =>
+                    <ModalB isOpen={this.state.isOpen}
+                    toggleModal={this.toggleModal} name={'Delete ' + e.name}
+                    key={index} id={e.id} 
+                    content={'Do you want to delete ' + e.name + '?'}
+                    Logout={() => this.Logout(e.id)} />
+                )}
+
+                {removeDellPModal.map((e, index) =>
+                    <ModalB isOpen={this.state.isOpen}
+                    toggleModal={this.toggleModal} name={'Delete ' + e.name}
+                    key={index} id={e.id} 
+                    content={'Do you want to delete ' + e.name + '?'}
+                    Logout={() => this.Logout(e.id)} />
+                )}
         </div>           
       );
   }
@@ -193,3 +224,4 @@ class LapTop extends Component {
 }
 
 export default LapTop;
+
