@@ -213,9 +213,17 @@ background: $textColor; padding: 8px; color:$whiteText;}
         p{font-size: 1.5rem; color: $bgColor2;
             a{color:$bgColor2; text-decoration: underline;}        
         }
+    }
+}
+
+
+/*-----| Card  |------*/
+.card{margin: 0 0 50px;
+    .card-header{
+        background: $navColor;
+        h4{margin:0; color:$whiteText};
 
     }
-
 }
 
 

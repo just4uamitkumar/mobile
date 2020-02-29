@@ -10,12 +10,12 @@ class Header extends Component {
         this.state = {
             logo:"Demo App",
             pageList:[{'name':'Select a Page'},
-                    {'name':'Page 1', 'path':'/Pages/Page1'},
+                    {'name':'Weather', 'path':'/Pages/Weather'},
                     {'name':'Page 2', 'path':'/Pages/Page2'},
                     {'name':'Page 3', 'path':'/Pages/Page3'}, 
                     {'name':'Page 4', 'path':'/Pages/Page4'}],
 
-            radioList:[{'name':'Page 1', 'path':'/Pages/Page1'},
+            radioList:[{'name':'Weather', 'path':'/Pages/Weather'},
                         {'name':'Page 2', 'path':'/Pages/Page2'},
                         {'name':'Page 3', 'path':'/Pages/Page3'}, 
                         {'name':'Page 4', 'path':'/Pages/Page4'}]
@@ -57,8 +57,8 @@ class Header extends Component {
                 <FormGroup className="topRadio">                    
                     <FormGroup check>
                         {this.state.radioList.map((e, index) => 
-                            <Label check>
-                                <Input type="radio" value={e.path} key={index}
+                            <Label check  key={index}>
+                                <Input type="radio" value={e.path}
                                 onChange={this.onChange} name="pages"/> {e.name}
                             </Label>                        
                             )
