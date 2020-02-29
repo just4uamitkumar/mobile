@@ -9,7 +9,7 @@ function ModalB(props){
             <ModalBody> 
                 <h3>{props.content}</h3>
             </ModalBody>
-            <ModalFooter>
+            <ModalFooter className="text-right">
                 <Button color="danger"
                 onClick={props.toggleModal}>No</Button>
                 <Button color="success"

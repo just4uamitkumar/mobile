@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {Container, FormGroup, Card, CardBody,CardHeader, Input, Button,
-Form,Row, Col, Table, Label} from 'reactstrap';
+Form, Table, Label} from 'reactstrap';
 
 class Weather extends Component {
     constructor(props){
@@ -70,7 +70,7 @@ class Weather extends Component {
                                 <FormGroup>
                                     <Label>City Name</Label>
                                     <Input type="text" onChange={this.onChange}
-                                    name='city' value={this.state.city}/>
+                                    name="city" value={this.state.city}/>
                                 </FormGroup>
                                 <FormGroup className="text-right">
                                     <Button color="primary">Get Temperature
