@@ -19,9 +19,9 @@ import Login from './Components/Login';
 import Logout from './Components/Logout';
 
 import Weather from './Pages/Weather';
-import Page2 from './Pages/Page2';
-import Page3 from './Pages/Page3';
-import Page4 from './Pages/Page4';
+import Page2 from './Pages/page2';
+import Page3 from './Pages/page3';
+import Page4 from './Pages/page4';
 
 class App extends Component {
 
@@ -67,9 +67,9 @@ class App extends Component {
                   <Contact contactText={this.contactText}/>
                 </Route>
                 <Route path="/Pages/Weather"><Weather/></Route>
-                <Route path="/Pages/Page2"><Page2/></Route>
-                <Route path="/Pages/Page3"><Page3/></Route>
-                <Route path="/Pages/Page4"><Page4/></Route>
+                <Route path="/Pages/page2"><Page2/></Route>
+                <Route path="/Pages/page3"><Page3/></Route>
+                <Route path="/Pages/page4"><Page4/></Route>
                 
               </Switch>
             </div>
